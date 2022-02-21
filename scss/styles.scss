@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(113.18deg, #0F0F0F 27.38%, #0F2836 101.72%);
+    overflow: hidden;
+}
+
+.star{
+    position: absolute;    
+    width: 2px;
+    height: 2px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0 0 5px white;
+    cursor: pointer;
+    &::after{
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 25px;
+        height: 25px;
+        border: 1px solid gray;
+        border-radius: 50px;
+        opacity: 0;    
+        transition: all .25s;    
+    }        
+    &:hover{
+        &::after{
+            opacity: 1;            
+        }       
+    }
+}
+
+.star-info{      
+    position: absolute;
+    display: flex;
+    align-items:flex-end;
+    right: -120px;
+    bottom: -45px;
+    width: 120px;
+    height: 25px;
+    padding: 5px;
+    border-left: 1px solid gray;     
+    border-bottom: 1px solid gray;
+    color: #00ffdd;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 10px;    
+    text-align: center;    
+    opacity: 0.4;
+}
+
+.warning{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    visibility: hidden;    
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    box-shadow: 0 0 5px #00ffdd;
+    border-radius: 5px;
+    color: #00ffdd;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+}
+
+.controls{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;    
+    z-index: 10; 
+    .label{
+        color: #00ffdd;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 0.8rem;
+    }   
+    .input{
+        width: 85px;
+        color: #00ffdd;
+        box-shadow: 0 0 2px #00ffdd;
+        border: none;
+        border-radius: 5px;
+        background-color: #0F0F0F;
+        padding: 10px 15px;
+        margin: 0 15px 0 10px;
+        text-align: center;
+        transition: all .25s;
+        &:hover{
+            box-shadow: 0 0 7px #00ffdd;
+        }
+    }
+    .btn{   
+        padding: 10px;
+        background-color: #0F0F0F;
+        color: #00ffdd;
+        box-shadow: 0 0 7px #00ffdd;
+        border: none;
+        border-radius: 5px;    
+        cursor: pointer;
+        transition: all .25s;
+        &:hover{
+            background-color: #00ffdd;
+            color: #0F0F0F;
+        }
+    }
+}
+
